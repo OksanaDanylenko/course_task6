@@ -1,0 +1,244 @@
+/*****************************************************************************/
+#create {
+    display: block;
+    margin-bottom: 15px;
+
+}
+
+#filter-value-for-grid,
+#name-autor {
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: 2px solid #3df23d;
+}
+#add-to-menu {
+    margin: 15px auto;
+}
+
+#run-for-list {
+    margin-bottom: 15px;
+}
+
+
+.push-buy:hover,
+#run-for-grid:hover,
+#run-for-list:hover,
+#add-to-menu:hover,
+#create:hover {
+    top: 1px;
+    color: #fff;
+    text-shadow: 0 -1px rgba(0,0,0,.3), 0 0 1px #ffd, 0 0 3px #fff;
+    box-shadow: 0 -1px 4px rgba(0,0,0,.3), 0 2px 2px #fff, inset 0 2px 3px rgba(0,0,0,.8), inset 0 -1px 0 rgba(0,0,0,.05);
+}
+
+.push-buy,
+#run-for-grid,
+#run-for-list,
+#add-to-menu,
+#create {
+    font: 20px 'Caveat';
+    padding: 5px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: inset #72de26 0 -1px 1px, inset 0 1px 1px #98ff98, #3caa3c 0 0 0 1px, rgba(0,0,0,.3) 0 2px 5px;
+}
+
+.push-buy,.push-buy:active, .push-buy:focus,
+#run-for-grid,#run-for-grid:active, #run-for-grid:focus,
+#run-for-list, #run-for-list:active, #run-for-list:focus,
+#add-to-menu, #add-to-menu:active, #add-to-menu:focus,
+#create, #create:active, #create:focus{
+    outline: none;
+}
+
+.push-buy:hover,
+#run-for-grid:hover,
+#run-for-list:hover,
+#add-to-menu:hover,
+#create:hover {
+    background-position: right center; /* change the direction of the change here */
+}
+.push-buy,
+#run-for-grid,
+#run-for-list,
+#add-to-menu,
+#create {
+    background-image: linear-gradient(to right, #6cc73b 0%, #59db14 51%, #078220 100%);
+}
+
+
+#name-autor,
+#filter-value-for-grid {
+    outline: none;
+
+}
+/**********************************************/
+
+
+.no-display {
+    display: none;
+}
+
+/*****************************************************************************/
+
+
+@font-face {
+    font-family: 'Caveat';
+    src: url(fonts/Caveat-Regular.ttf);
+}
+
+
+body {
+    font: 20px 'Caveat';
+    line-height: 1;
+    padding: 0;
+    margin: auto 1% auto 9%;
+    background: url("images/pizza.png");
+}
+
+
+.about-pizza-for-list img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin-right: 10px;
+}
+
+.about-pizza-for-list {
+    float: right;
+    width: 95%;
+    display: inline-flex;
+    margin-bottom: 20px;
+    height: 40px;
+}
+
+.list-hide-for-list {
+    display: none;
+}
+
+.about-pizza-for-list div:nth-child(2), .about-pizza-for-list div:nth-child(5){
+    line-height: 50px;
+}
+body > main > div:nth-child(2){
+    text-align: center;
+}
+
+/*****************************************************************************/
+
+.name {
+    text-align: center;
+}
+
+.about-pizza-for-grid img {
+    padding-top: 10px;
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 10px;
+
+}
+
+.about-pizza-for-grid {
+    background: white;
+    float: left;
+    width: 29%;
+    height: 370px;
+    border: 1px solid greenyellow;
+    margin: 1%;
+}
+
+.menu-for-grid:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.about-pizza-for-grid div {
+    padding: 0 20px;
+}
+
+main > div:nth-child(1) {
+    padding: 20px 0 20px 10px;
+}
+
+
+#choose {
+    padding-top: 10px;
+    text-align: center;
+}
+
+/*******flip*****/
+
+.flip-container {
+    perspective: 1000px;
+}
+
+.flip-container .flipper, .flip-container.hover .flipper {
+    transform: rotateY(180deg);
+}
+
+.flip-container, .front {
+    width: 320px;
+    height: 550px;
+}
+.flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.front {
+    z-index: 2;
+}
+.back {
+    transform: rotateY(180deg);
+}
+
+/***************/
+#buy {
+    padding-bottom: 70px;
+    padding-left: 52%;
+}
+
+#buy:before {
+    content: '';
+    position: absolute;
+    background-image: url(images/cart.png);
+    background-repeat: no-repeat;
+    margin-left: -60px;
+    width: 80px;
+    height: 80px;
+}
+
+#buy-count {
+    background-color: red;
+    padding: 0 10px;
+    border-radius: 12px;
+    color: white;
+}
+
+.push-buy {
+    margin-left: 30%;
+    margin-top: 15px;
+}
+
+.about-pizza-for-list .push-buy {
+    line-height: 1px;
+
+}
+
+
+.wrapper {
+    width: 40%;
+    display: inherit;
+}
