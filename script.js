@@ -97,7 +97,7 @@ let st = window.localStorage;
 let countAutorPizza = 0;
 
 let k = 20;
-while (st.getItem('pizzaAutor' + k)!=null) {
+while (st.getItem('autor' + k)!=null) {
     countAutorPizza++;
     k++;
 }
@@ -394,8 +394,8 @@ choose.addEventListener('click', function a(event) {
 
             let idL = 20;
             let st = window.localStorage;
-            while (st.getItem('pizzaAutor'+idL)!=null) {
-                let pizzaA = JSON.parse(st.getItem('pizzaAutor' + idL));
+            while (st.getItem('autor'+idL)!=null) {
+                let pizzaA = JSON.parse(st.getItem('autor' + idL));
                 if (pizzaA.selectedPizzaIndredients.toUpperCase().indexOf(ingr.toUpperCase()) == -1) {
                     document.getElementById(idL.toString()).parentElement.parentElement.parentElement.className = 'no-display';
                 }
@@ -415,9 +415,9 @@ choose.addEventListener('click', function a(event) {
         let idLast = 20;
         /**if there is smth in storage of auth pizzas*/
         let st = window.localStorage;
-        while (st.getItem('pizzaAutor'+idLast)!=null) {
+        while (st.getItem('autor'+idLast)!=null) {
 
-            let pizzaA = JSON.parse(st.getItem('pizzaAutor' + idLast));
+            let pizzaA = JSON.parse(st.getItem('autor' + idLast));
             idLast++;
             let menu = document.getElementsByClassName('menu-for-grid')[0];
 
@@ -584,9 +584,9 @@ choose.addEventListener('click', function a(event) {
         let idLast = 20;
         /**if there is smth in storage of authors pizzas*/
         let st = window.localStorage;
-        while (st.getItem('pizzaAutor'+idLast)!=null){
+        while (st.getItem('autor'+idLast)!=null){
 
-            let pizzaA = JSON.parse(st.getItem('pizzaAutor'+idLast));
+            let pizzaA = JSON.parse(st.getItem('autor'+idLast));
             idLast++;
 
             let divFirst = document.createElement('div');
@@ -808,7 +808,7 @@ addNewPizzaToList.addEventListener('click', (addToMenu) => {
 
         let st = window.localStorage;
         let pJ = JSON.stringify(objToStore);
-        st.setItem(('pizzaAutor'+ idA),pJ);
+        st.setItem(('autor'+ idA),pJ);
 
     }
     else {
@@ -857,7 +857,7 @@ addNewPizzaToList.addEventListener('click', (addToMenu) => {
 
         let st = window.localStorage;
         let pJ = JSON.stringify(objToStore);
-        st.setItem(('pizzaAutor'+ idA),pJ);
+        st.setItem(('autor'+ idA),pJ);
 
     }
 
@@ -870,3 +870,10 @@ function unchecked() {
     let clearName = document.getElementById('name-autor');
     clearName.value = '';
 }
+
+/**basket***/
+
+let basket = document.getElementById('buy');
+basket.addEventListener('click', ()=>{
+    location.href = "./basket.html";
+});
